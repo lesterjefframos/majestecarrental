@@ -1,0 +1,315 @@
+/* navigation */
+
+.item-list {
+    display: flex;
+    gap: var(--spacing-m);
+}
+
+.item-menu {
+    list-style-type: none;
+
+}
+
+.item-menu a {
+    text-decoration: none;
+    color:var(--text-light);
+    transition: all .3s ease-in-out;
+}
+
+.active a {
+    color: var(--text-highlight);
+    font-weight: 600;
+}
+
+.item-menu a:hover {
+    color: var(--text-highlight);
+}
+
+/* hero */
+
+.home-hero {
+    background: url("../images/hero-home-image.webp") no-repeat right;
+    background-size: 60% auto;
+    margin-top: 100px;
+    height: 800px;
+    display: flex;
+    align-items: center;
+}
+
+/* stats */
+
+.main-stat {
+    padding: var(--spacing-m);
+    background: var(--primary-dark-bg);
+}
+
+.stat-wrp {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-s);
+}
+
+.stat-content span {
+    color: var(--text-light);
+}
+
+.stat-content span:first-of-type {
+    font-size: var(--font-size-l);
+    font-weight: 700;
+    margin: -12px 0;
+}
+
+/* rides */
+
+.main-rides {
+    padding: var(--spacing-m);
+    margin-top: var(--spacing-xl);
+}
+
+.rides-wrp {
+    max-width: 1440px;
+    width: 100%;
+}
+
+.rides-wrp span {
+    font-size: var(--font-size-m-web);
+    font-weight: 600;
+}
+
+.ride-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-m);
+    margin-top: var(--spacing-m);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .2);
+    position: relative;
+}
+
+.tag {
+    padding: var(--spacing-xs) var(--spacing-s);
+    background: var(--primary-dark-bg);
+    position: absolute;
+    color: var(--text-light);
+    font-size: 12px;
+    border-radius: 50px;
+    top: 16px;
+    right: 16px;
+}
+
+.card-img-left {
+    background: url("../images/card-innova.webp") no-repeat center;
+    background-size: 100% auto;
+    height: 312px;
+    transition: all .5s ease-in-out;
+}
+
+.card-img-right {
+    background: url("../images/card-vios.webp") no-repeat center;
+    background-size: 100% auto;
+    height: 312px;
+    transition: all .5s ease-in-out;
+}
+
+.card:hover .card-img-left,
+.card:hover .card-img-right {
+    background-size: 105% auto;
+}
+
+.card-content {
+    padding: var(--spacing-m);
+    background: var(--secondary-light-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: self-end;
+    align-content: baseline;
+}
+
+.card-btn{
+    text-decoration: none;
+    color: var(--text-dark);
+    padding: var(--button-size);
+
+    border: 1px solid var(--primary-dark-bg);
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.car-model {
+    font-size: var(--font-size-s) !important;
+}
+
+.card-text > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-text > div >span {
+    font-size: var(--font-size-s) !important;
+    font-weight: 400 !important;
+}
+
+/* how it works */
+
+.main-hw-wrk {
+    padding: var(--spacing-m);
+    margin-top: var(--spacing-xl);
+}
+
+.hw-wrk-wrp {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hw-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.hw-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.hw-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--spacing-l);
+}
+
+.hw-btn {
+    padding: var(--button-size);
+    background: var(--button-primary-3);
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    text-align: center;
+    align-self: center;
+}
+
+/* testimonials */
+
+.main-test {
+    padding: var(--spacing-m);
+    margin-top: var(--spacing-xl);
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    width: 100%;
+    border-bottom: 1px solid var(--primary-dark-bg);
+    padding-bottom: var(--spacing-xs);
+    margin-bottom: var(--spacing-l);
+}
+
+.btn-control {
+    background: none;
+    border: none;
+    padding: var(--spacing-xs);
+    cursor: pointer;
+}
+
+.slider {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.client-pp {
+    width: 64px;
+    height: 64px;
+    border-radius: 100px;
+}
+
+.pp-1 {
+    background: url("../images/profile/profile-1.webp") no-repeat;
+    background-size: cover;
+}
+
+.pp-2 {
+    background: url("../images/profile/profile-2.webp") no-repeat;
+    background-size: cover;
+}
+
+.pp-3 {
+    background: url("../images/profile/profile-3.webp") no-repeat;
+    background-size: cover;
+}
+
+.pp-4 {
+    background: url("../images/profile/profile-4.webp") no-repeat;
+    background-size: cover;
+}
+
+.pp-5 {
+    background: url("../images/profile/profile-5.webp") no-repeat;
+    background-size: cover;
+}
+
+.head-left {
+    display: flex;
+    gap: var(--spacing-s);
+    align-items: center;
+    margin-bottom: var(--spacing-m);
+}
+
+.client-det {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.name {
+    font-weight: 600;
+}
+
+.test-card {
+    width: 900px;
+    flex: 0 0 80%;
+    scroll-snap-align: start;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+    margin-left: var(--spacing-l);
+}
+
+.card-body p {
+    line-height: 24px;
+}
+

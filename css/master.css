@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    background: var(--primary-light-bg);
+    display: block;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+/* head and navigation */
+
+.main-head-cnt {
+    background: var(--primary-dark-bg);
+    padding: var(--spacing-m);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: all .5s ease-in-out;
+    z-index: 1;
+}
+
+.main-head-cnt.scroll {
+    background: none;
+}
+
+.head-wrp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    width: 100%;
+    transition: all .5s ease-in-out;
+}
+
+.main-head-cnt.scroll .head-wrp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    width: 100%;
+    background: rgba(0, 0, 0, .3);
+    padding: 16px 48px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 0px 0px rgba(255, 255, 255, 0);
+    position: relative;
+    overflow: hidden;
+}
+
+.main-head-cnt.scroll .head-wrp::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height:1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+}
+
+.main-head-cnt.scroll .head-wrp::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, .1),
+        transparent,
+        rgba(255, 255, 255, 0.1)
+    );
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.contact>span {
+    color: var(--text-light);
+}
+
+/* global hero */
+
+.home-hero {
+    padding: var(--spacing-m);
+}
+
+.hero-wrp {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+}
+
+.hero-content {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-l);
+    transform: translateY(-50px);
+}
+
+.hero-content h1 {
+    font-size: var(--font-size-xl);
+    line-height: 56px;
+    color: var(--text-dark);
+}
+
+.hero-content p {
+    color: var(--text-dark);
+}
+
+.hero-btn {
+    display: flex;
+    gap: var(--spacing-s);
+}
+
+.hero-btn a {
+    padding: var(--button-size);
+    text-decoration: none;
+}
+
+.pri-btn {
+    background: var(--button-primary-3);
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.sec-btn {
+    border: 1px solid var(--button-outline);
+    color: var(--text-dark);
+}
+
+/* footer */
+
+.main-footer {
+    padding: var(--spacing-m);
+    background: var(--primary-dark-bg);
+    margin-top: var(--spacing-xl);
+}
+
+.footer-wrp {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-xxl)
+}
+
+.footer-wrp p {
+    color: var(--text-light);
+}
+
+.footer-about {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-m);
+    flex: 1;
+}
+
+.footer-about p {
+    font-weight: 200;
+}
+
+.soc-ico svg {
+    margin-right: var(--spacing-s);
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-s);
+}
+
+.pay-ico {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-m);
+}
+
+.rights {
+    padding: var(--spacing-xs);
+    background: var(--secondary-dark-bg);
+    text-align: center;
+    color: var(--text-light);
+}
+/* variables */
+
+:root {
+
+    /* bg colors */
+
+    --primary-light-bg: #FFFFFF;
+    --secondary-light-bg: #EFEFEF;
+    --primary-dark-bg: #1c1c1c;
+    --secondary-dark-bg: #2d2d2d;
+    --button-primary-1: #FFF48E;
+    --button-primary-2: #FFD646;
+    --button-primary-3: #FECB1B;
+    --secondary-dark-bg: #2d2d2d;
+    --button-outline: #2d2d2d;
+
+    /* text colors */
+
+    --text-dark: #2d2d2d;
+    --text-light: #ffffff;
+    --text-highlight: #FFF48E;
+
+    /* sizes */
+
+    --font-size-xs: 8px;
+    --font-size-s: 16px;
+    --font-size-m-web: 24px;
+    --font-size-m-mob: 20px;
+    --font-size-l: 32px;
+    --font-size-xl: 48px;
+
+    /* spacing */
+
+    --spacing-xs: 8px;
+    --spacing-s: 16px;
+    --spacing-m: 24px;
+    --spacing-l: 32px;
+    --spacing-xl: 48px;
+    --spacing-xxl: 64px;
+
+    /* button sizing */
+
+    --button-size: 12px 24px;
+
+}

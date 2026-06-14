@@ -242,9 +242,9 @@
     scrollbar-width: none;
 }
 
-.slider::-webkit-scrollbar {
+/* .slider::-webkit-scrollbar {
     display: none;
-}
+} */
 
 .card-head {
     display: flex;

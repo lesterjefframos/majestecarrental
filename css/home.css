@@ -240,11 +240,12 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
+    -webkit-scroll-snap-type: x mandatory;
 }
 
-/* .slider::-webkit-scrollbar {
+.slider::-webkit-scrollbar {
     display: none;
-} */
+}
 
 .card-head {
     display: flex;
